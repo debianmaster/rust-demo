@@ -1,0 +1,23 @@
+version: v2
+
+tasks:
+  compile:
+    runner: razorci/rust
+    steps:
+    - checkout
+    - commands:
+      - rustc --version
+      - cargo --version
+      - mkdir -p $CARGO_HOME
+
+    - run: cargo update
+
+    - cache/pull: cargo-{{ checksum "Cargo.lock" }}
+    - run: cargo build
+    - cache/push:
+        key: cargo-{{ checksum "Cargo.lock" }}
+        paths:
+        ## $CARGO_HOME cache path
+        - /usr/local/cargo
+    
+    - run: cargo test --all
