@@ -4,6 +4,8 @@ If you have forked this repo, then connect with Razorops to create your demo pip
 
 [![Connect](https://github.com/razorops-public/images/blob/main/connect_with_github.svg)](https://dashboard.razorops.com/get-github-installation-link-for-org)
 
+[![Build Status](https://api.razorops.com/apps/damp-dew-6277/badge.svg?branch=main)](https://api.razorops.com/apps/damp-dew-6277/workflows)
+
 This is an example code to demonstrate how to create [Rust](https://docs.docker.com/compose/) based pipeline on [Razorops](https://docs.razorops.com/) platform.
 
 This application consists on a basic calculator with sum, multiplication, lcd and gcd operations. 
